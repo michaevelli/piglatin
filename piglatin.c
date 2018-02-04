@@ -7,13 +7,10 @@ void main(){
 
     while(c != EOF){
         c = getchar();
-        if(c == ' ' || c == '\n' || c == '\t' || c == EOF){
+        if((c == ' ' || c == '\n' || c == '\t') && flag == 1){
             flag = 0;
             putchar(buffer);
             printf("ay");
-            if(c == EOF){
-                break;
-            }
             putchar(c);
         } else {
             if(flag == 1){
@@ -27,8 +24,5 @@ void main(){
                 }
             }
         }
-        //if(c == EOF){
-        //    break;
-        //}
     }
 }
